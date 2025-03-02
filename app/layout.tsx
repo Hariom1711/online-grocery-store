@@ -4,6 +4,7 @@ import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
+import { CartProvider } from './context/CartContext';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+         <CartProvider>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -39,6 +41,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        </CartProvider>
       </body>
     </html>
   );

@@ -251,6 +251,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, ArrowRight, Search } from 'lucide-react';
+import CartButton from '@/components/CartButton';
 
 export default function Home() {
   // Featured products data - this would eventually come from your database
@@ -333,7 +334,8 @@ export default function Home() {
               />
             </div>
             <Button size="icon" variant="ghost">
-              <ShoppingCart className="h-5 w-5" />
+              {/* <ShoppingCart className="h-5 w-5" /> */}
+              <CartButton />
             </Button>
             <Button variant="ghost" size="sm" className="gap-1.5">
               Sign In
