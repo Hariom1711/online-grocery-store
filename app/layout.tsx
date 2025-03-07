@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
 import { CartProvider } from './context/CartContext';
+import AuthProvider from '@/components/AuthProvider';
+import Navbar from '@/components/Navbar';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -32,6 +34,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+          <AuthProvider>
          <CartProvider>
         <ThemeProvider
           attribute="class"
@@ -39,9 +42,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar/>
           {children}
         </ThemeProvider>
         </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

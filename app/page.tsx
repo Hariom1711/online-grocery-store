@@ -303,47 +303,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Navigation Bar */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-gradient">Fresh Grocer</span>
-            </Link>
-            <nav className="hidden md:flex gap-6">
-              <Link href="/products" className="text-sm font-medium hover:text-primary transition-colors">
-                All Products
-              </Link>
-              <Link href="/products" className="text-sm font-medium hover:text-primary transition-colors">
-                Categories
-              </Link>
-              <Link href="/products" className="text-sm font-medium hover:text-primary transition-colors">
-                Special Deals
-              </Link>
-              <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
-                About Us
-              </Link>
-            </nav>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="relative hidden md:flex items-center">
-              <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
-              <input
-                type="search"
-                placeholder="Search products..."
-                className="rounded-full bg-background pl-8 pr-4 py-2 text-sm ring-1 ring-border focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
-            <Button size="icon" variant="ghost">
-              {/* <ShoppingCart className="h-5 w-5" /> */}
-              <CartButton />
-            </Button>
-            <Button variant="ghost" size="sm" className="gap-1.5">
-              Sign In
-            </Button>
-            <Button size="sm">Get Started</Button>
-          </div>
-        </div>
-      </header>
+ 
 
       <main className="flex-1">
         {/* Hero Section */}
